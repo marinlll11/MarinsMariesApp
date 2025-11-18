@@ -15,7 +15,7 @@ else:
     with open(KEY_FILE, "rb") as f:
         KEY = f.read()
 
-fernet = Fernet(KEY)
+fernet = Fernet(KEY) 
 
 def chiffre(texte):
     return fernet.encrypt(texte.encode()).decode()
