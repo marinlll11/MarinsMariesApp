@@ -1,0 +1,81 @@
+[
+  {
+    "type": "conducteur",
+    "position": [
+      35.056393004795964,
+      129.08866882324222
+    ],
+    "nom": "a",
+    "genre_autorise": "a",
+    "heure_souhaitee": "a",
+    "message_trajet": "aa",
+    "user_id": "14c8da16-ab59-4a1a-9add-2cb343602042",
+    "pseudo": "monkill",
+    "heure": "2025-11-18 01:43:37.986308",
+    "id": "dbdd9cd5-a5f0-43a4-8577-7ee75fce5913",
+    "heure2": "2025-11-18T01:43:37.986399",
+    "sexe": null,
+    "delai_souhaite": null,
+    "commentaire": "",
+    "etat_aide": "none",
+    "aides": []
+  },
+  {
+    "type": "compagnon",
+    "position": [
+      35.06369685400154,
+      129.08077239990237
+    ],
+    "nom": "a",
+    "genre_autorise": "a",
+    "heure_souhaitee": "a",
+    "message_trajet": "a",
+    "user_id": "14c8da16-ab59-4a1a-9add-2cb343602042",
+    "pseudo": "monkill",
+    "heure": "2025-11-18 01:43:54.435823",
+    "id": "473f7653-8b1a-4e0c-b0eb-5271e8c7613b",
+    "heure2": "2025-11-18T01:43:54.435898",
+    "sexe": null,
+    "delai_souhaite": null,
+    "commentaire": "",
+    "etat_aide": "waiting",
+    "aides": [
+      {
+        "id_aide": "f5ea5a96-fa8d-4ecf-bb5b-0d1f236f69e6",
+        "user_id": "1055bf53-d6fc-4922-86d0-8c90493f2dbe",
+        "pseudo": "zkodpzd",
+        "heure": "a",
+        "message": "a",
+        "prenom": "a",
+        "sexe": "a",
+        "etat": "en_attente",
+        "heure_envoi": "2025-11-18T01:44:02.616284",
+        "tel": "gAAAAABpG8FS7kqWZVo1zctqMeIz51xhkOoYeqE0CYjSpSpWRA_ncNXlRI7TEhgR0_3KnK0JA_RLKrqPLKUkwDs1md-ZvFBMhQ=="
+      },
+      {
+        "id_aide": "9307785f-8be5-49ac-a361-cfe6a977995d",
+        "user_id": "1055bf53-d6fc-4922-86d0-8c90493f2dbe",
+        "pseudo": "zkodpzd",
+        "heure": "a",
+        "message": "a",
+        "prenom": "a",
+        "sexe": "a",
+        "etat": "acceptee",
+        "heure_envoi": "2025-11-18T01:44:12.825434",
+        "tel": "gAAAAABpG8FcYQ8ZNKELQLrlMuIZLITDZ1Mv3IpQqzeGB90wKH24qW2zLLV_-ofxSM2BiKNkcF38byJbGkO5VVbgp5KLCyt8og=="
+      },
+      {
+        "id_aide": "fbd2fda8-ffbb-4f64-8484-9773cccef80f",
+        "user_id": "1055bf53-d6fc-4922-86d0-8c90493f2dbe",
+        "pseudo": "zkodpzd",
+        "heure": "a",
+        "message": "a",
+        "prenom": "a",
+        "sexe": "a",
+        "etat": "acceptee",
+        "heure_envoi": "2025-11-18T01:44:22.144769",
+        "tel": "gAAAAABpG8FmyOF35b50tXNrPTR8hQl-N4EVMhQsZgwWEnuFJ1lEaIVR2Hkv_4mbkimbtuhMNVllkrD1hjVO9p8L3n8LtDzyaw=="
+      }
+    ]
+  }
+]
