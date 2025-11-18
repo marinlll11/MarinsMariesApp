@@ -5,7 +5,7 @@ import json, os, uuid
 
 app = Flask(__name__)
 
-KEY_FILE = "projet/static/secret.key"
+KEY_FILE = "static/secret.key"
 
 if not os.path.exists(KEY_FILE):
     key = Fernet.generate_key()
@@ -28,10 +28,10 @@ def dechiffre(texte_chiffre):
 
 signaling = {}
 
-DATA_ZONES = "projet/data/zones.json"
-DATA_SIGNALEMENTS = "projet/data/signalements.json" 
-DATA_TRAJETS = "projet/data/trajets.json"
-DATA_UTILISATEURS = "projet/data/utilisateurs.json"
+DATA_ZONES = "data/zones.json"
+DATA_SIGNALEMENTS = "data/signalements.json" 
+DATA_TRAJETS = "data/trajets.json"
+DATA_UTILISATEURS = "data/utilisateurs.json"
 
 def charger_zones():
     with open(DATA_ZONES, "r", encoding="utf-8") as f:
