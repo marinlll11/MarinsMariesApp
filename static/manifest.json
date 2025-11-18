@@ -5,7 +5,7 @@
     "display": "standalone",
     "background_color": "#ffffff",
     "theme-color": "#4CAF50",
-    "description": "Application de mise en relation sécurisée marcheurs/rameneurs",
+    "description": "Application de mise en relation securisee marcheurs rameneurs",
     "icons": [
         {
             "src": "/static/icon/compagnon.png",
@@ -14,7 +14,7 @@
         },
         {
             "src": "/static/icon/compagnon.png",
-            "sizes": "192x192",
+            "sizes": "512x512",
             "type": "image/png"
         }
     ]
