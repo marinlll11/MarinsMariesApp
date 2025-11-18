@@ -513,6 +513,10 @@ async function accepterAppel(fromId, offerString) {
     pc.ontrack = (event) => {
         const audio = new Audio();
         audio.srcObject = event.streams[0];
+        audio.autoplay = true;
+        if (audio.setSinkId) {
+            audio.setSinkId("speaker");
+        }
         audio.play();
     };
 
@@ -627,9 +631,12 @@ if (navigator.geolocation) {
             console.log("GPS OK :", pos);
         const lat = pos.coords.latitude;
         const lon = pos.coords.longitude;
-
-        carte.setView([lat, lon], 14);
-
+        
+        if (!window._carteDejaCentree) {
+            carte.setView([lat, lon], 14);
+            window._carteDejaCentree = true;
+        }
+        
         marqueurUtilisateur = L.marker([lat, lon]).addTo(carte)
             .bindPopup("Vous êtes ici")
             .openPopup();
