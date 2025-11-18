@@ -135,3 +135,79 @@ body {
     color: white;
     border-color: #2d7a2d;
 }
+
+@media (max-width: 600px) and (orientation: portrait) {
+    body {
+        font-size: 16px;
+    }
+
+    #carte {
+        height: 55vh !important;
+    }
+
+    .popup {
+        width: 90vw;
+        max-height: 80vh;
+        padding: 15px;
+    }
+
+    #map-buttons {
+        bottom: 10px;
+        right: 10px;
+        gap: 6px;
+    }
+
+    #map-buttons button {
+        padding: 8px 12px;
+        font-size: 13px;
+    }
+
+    #legende {
+        top: 80px;
+        right: 10px;
+        font-size: 12px;
+        padding: 6px 8px;
+    }
+
+    #choix-type {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .btn-type {
+        width: 90%;
+        text-align: center;
+        padding: 10px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 900px) and (orientation: landscape) {
+    #carte {
+        height: 70vh !important;
+    }
+
+    .popup {
+        width: 70vw;
+        max-height: 70vh;
+    }
+
+    #map-buttons {
+        bottom: 10px;
+        right: 10px;
+        gap: 8px;
+    }
+
+    #map-buttons button {
+        padding: 8px 10px;
+        font-size: 13px;
+    }
+
+    #legende {
+        font-size: 12px;
+        padding: 8px;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+}
