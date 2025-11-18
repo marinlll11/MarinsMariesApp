@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>MarinsMaries App - Carte</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="/static/manifest.json">
+    <script>
+        if ("serviceWorker" in navigator) {
+            navigator.serviceWorker.register("/static/service-worker.js");
+        }
+    </script>
+</head>
+<body>
+    <h1>MarinsMaries App</h1>
+    <button id="btn-compte" class="btn-big">
+        Mes accès
+    </button>
+    <div id="popup-compte" class="popup hidden">
+        <h3>Mes accès</h3>
+
+        <label>Changer de pseudo :</label>
+        <input type="text" id="input-pseudo">
+
+        <button id="btn-save-pseudo">Enregistrer</button>
+
+        <div style="height : 7px;"></div>
+
+        <button id="btn-admin" class="hidden">Zone admin</button>
+
+        <button id="btn-open-aides">Mes propositions reçues</button>
+
+        <hr>
+
+        <button id="btn-close-compte">Fermer mes accès</button>
+    </div>
+    <div id="popup-admin" class="popup hidden">
+        <h2>Zone admin</h2>
+        <h3>Signalements :</h3>
+        <div id="admin-signalements"></div>
+        <hr>
+        <h3>Gestion utilisateurs</h3>
+        <button onclick="ajouterAdmin()">Ajouter un nouvel admin</button>
+        <button onclick="ajouterBan()">Bannir un utilisateur</button>
+        <button onclick="ajouterExpulsion()">Expulser un utilisateur</button>
+        <hr>
+        <button class="close" onclick="fermerAdmin()">Fermer</button>
+    </div>
+    <div id="popup-aides" class="popup hidden">
+        <h3>Propositions reçues</h3>
+
+        <h4>Propositions en attente</h4>
+        <hr>
+        <div id="liste-aides"></div>
+        <hr>
+        <h4>Propositions acceptées</h4>
+        <div id="liste-acceptees"></div>
+
+        <div style="height : 9px;"></div>
+        <button onclick="fermerAides()">Fermer</button>
+    </div>
+    <div id="legende">
+        <p><img src="icon/moi.png" width="30"> Moi</p>
+        <p><img src="icon/marcheur.png" width="30"> Marcheur</p>
+        <p><img src="icon/conducteur.png" width="20"> Conducteur</p>
+        <p><img src="icon/compagnon.png" width="30"> Compagnon demande</p>
+        <p><img src="icon/compagnon.png" width="20"> Compagnon proposition</p>
+    </div>
+    <div id="carte">
+        <div id="map-buttons">
+            <button id="btn-center">Revenir sur ma position actuelle</button>
+            <button id="btn-save-pos">Sauvegarder ma position actuelle</button>
+            <button id="btn-go-saved">Revenir sur ma position sauvegardée</button>
+            <button id="btn-refresh">Actualiser la carte</button>
+        </div>
+    </div>
+    <div style="height: 8px"></div>
+    <div id="choix-type">
+        <button class="btn-type" data-type="marcheur">Je pose une demande de retour en véhicule sur la carte, <br>je l'enlève en recliquant dessus</button>
+        <button class="btn-type" data-type="conducteur">Je pose une proposition de retour en véhicule sur la carte, <br>je l'enlève en recliquant dessus</button>
+        <button class="btn-type" data-type="compagnon_demande">Je pose une demande de retour à pied sur la carte, <br>je l'enlève en recliquant dessus</button>
+        <button class="btn-type" data-type="compagnon_proposition">Je pose une proposition de retour à pied sur la carte, <br>je l'enlève en recliquant dessus</button>
+    </div>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
